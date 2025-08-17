@@ -43,6 +43,8 @@ Gemini CLIを使って、context7 を利用する例
 - https://github.com/google-gemini/gemini-cli
 - https://github.com/upstash/context7
 
+`~/.gemini/settings.json` に以下を追記してください
+
 ```json:~/.gemini/settings.json
 {
   "mcpServers": {
@@ -113,7 +115,7 @@ func main() {
 }
 ```
 
-`~/.gemini/GEMINI` に自分のニックネームを書いて gemini を起動し、`uji mcp の HelloTool を使ってください` と聞いてみてください
+`~/.gemini/GEMINI.md` に自分のニックネームを書いて gemini を起動し、`uji mcp の HelloTool を使ってください` と聞いてみてください
 
 ## 四則演算
 
@@ -126,7 +128,7 @@ func main() {
 - handler では `request.RequireInt("x")` とすると入力を整数型intとして受け取れる
 - 計算ロジックは以下のように書ける
   ```
-  var result float64
+  var result int
   switch op {
   case "add":
       result = x + y
